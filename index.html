@@ -19,6 +19,7 @@
             overflow: hidden;
             position: relative;
             animation: backgroundAnimation 5s infinite alternate;
+            flex-direction: column;
         }
 
         /* Анимация фона */
@@ -41,6 +42,7 @@
             text-shadow: 4px 4px 20px rgba(0, 0, 0, 0.7); /* Тень */
             margin: 20px 0;
             animation: bounce 2s infinite;
+            word-wrap: break-word;
         }
 
         /* Стиль сообщения */
@@ -51,6 +53,7 @@
             color: #fff;
             line-height: 1.5;
             animation: fadeIn 3s ease-out;
+            word-wrap: break-word;
         }
 
         /* Анимация появления текста */
@@ -126,6 +129,38 @@
             animation: fadeIn 5s ease-out;
         }
 
+        /* Адаптивные стили для маленьких экранов */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 3em; /* Уменьшаем размер заголовка */
+            }
+            .message {
+                font-size: 2em; /* Уменьшаем размер текста */
+            }
+            .hearts {
+                font-size: 4em; /* Уменьшаем размер сердечек */
+            }
+            .button {
+                font-size: 1.5em; /* Уменьшаем размер кнопки */
+                padding: 15px 30px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            h1 {
+                font-size: 2.5em; /* Уменьшаем размер заголовка ещё больше */
+            }
+            .message {
+                font-size: 1.8em; /* Уменьшаем размер текста ещё больше */
+            }
+            .hearts {
+                font-size: 3em; /* Уменьшаем размер сердечек */
+            }
+            .button {
+                font-size: 1.3em; /* Уменьшаем размер кнопки */
+                padding: 12px 25px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -156,3 +191,4 @@
 
 </body>
 </html>
+
